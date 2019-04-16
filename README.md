@@ -1,3 +1,5 @@
 # cmsimfly
 CMSimfly is a simple CMS in Flask
-file:///J:/g1/content/index.html
+
+
+https://127.0.0.1:8444/content/index.html
