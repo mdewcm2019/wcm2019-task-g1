@@ -11,11 +11,35 @@
 <p><iframe allowfullscreen="allowfullscreen" height="360" src="//www.youtube.com/embed/C7vEZgBVBXc" width="500"></iframe></p>
 <p>40723128郭哲明</p>
 <p><iframe allowfullscreen="allowfullscreen" height="360" src="//www.youtube.com/embed/xOyw4eNSXKc" width="500"></iframe></p>
-<p></p><h1>目錄結構</h1>
-<p>CMSimfly 的動態系統採用 Python3 + Flask 建構, 並且利用 Beatifulsoup 解讀位於 contig 目錄中的 content.htm 超文件檔案.</p>
-<p>content.htm 檔案可以透過動態系統中的 generate_pages 功能, 將超文件轉為位於 content 目錄中的個別頁面檔案.</p>
-<p>動態系統與靜態系統則共用 downloads, images, static 等目錄, 其中 downloads 目錄存放在動態系統上傳的文件檔, 而 images 目錄則存放動態系統所上傳的影像檔案, 包括 jpg, png 與 gif 等格式圖檔.</p>
-<p>static 目錄則存放在動態與靜態系統所需要的 Javascript 或 Brython 程式檔.</p><h1>頁面編輯</h1>
+<p></p><h1>導入ungit</h1>
+<p><span>nodejs裡面有ungit-&gt;程式為nodejs所寫，nodejs位置在</span><span>appdata-&gt;roming-&gt;npm-&gt;ungi</span><span> 。</span><br/><span>程式碼在appdata-&gt;roming-&gt;npm-&gt;node-modules-&gt;ungit-&gt;CHANGELOG.md。</span><br/><b><br/></b><span></span></p><h4>start.bat跟start.cadlab.bat差別</h4>
+<p><span>因Home位置不同，適用範圍有所不同!!</span><br/><span>start.bat=&gt;學校外適用。</span><br/><span>start.cadlab.bat=&gt;學校內適用，不能使用在學校外的地方。</span><br/><br/></p><h4>STAPE1</h4>
+<p><br/><span>1.設定路徑=&gt;</span><br/><span>    set path8=%Disk%:\nodejs;%Disk%:\nodejs\appdata\roaming\npm;放置到start.cadlab的sciTE裡      的path7後。</span></p>
+<div><span><br/></span><span>2.將 path8 納入 path 設定=&gt;</span><br/><span>    %path8%；-&gt;讓nodejs.ungit直行即可使用。</span><br/>
+<div><span>    在同上步驟中的sciTE中有path程式碼將%path8%；直接放在最後方。</span></div>
+<div><span> </span></div>
+<div><span>3.分別start.bat跟start.cadlab.bat都如上兩步驟操作並儲存。</span></div>
+<div><span> </span></div>
+<div><span>4.按start.cadlab.bat打入ungit可作執行，之後出現頁面表示設定成功，按允許儲存，再將跳出        的網頁關掉。</span></div>
+<div><span> </span></div>
+<div><span>5.針對nodejs設定路徑=&gt;</span></div>
+<div><span>    [set. USERPROFILE=%Disk%:\home]start.cadlab.bat中需加入以上程式碼                在 set.HOME=%Disk%:\home-cadlab之下方增加。</span></div>
+<div><span>  *將以上程式關掉(剛才使用的程式碼還不用關。若關掉，kmol-2019-&gt;data-&gt;scite-&gt;bin-&gt;按          scite黑色圓點。</span></div>
+<div><span>以便能作動，因nodejs系統user的路徑找git的設定檔，但找不到，又因為需變為可攜程式，必須透過上述方式來作動!!</span></div>
+<div><span>6.start.bat也是上述步驟重複一遍。完成初步動作。。。。。</span></div>
+</div><h4>STAPE2</h4>
+<div><span>可在mde.tw中2019 spring...裡，實習任務之任務2有明確步驟可找到下面的程式。</span></div>
+<div><span>ungit --launchBrowser=0 --launchCommand "C:\PROGRA~2\Google\Chrome\Application\chrome.exe  %U"</span></div>
+<div><span>需使用簡寫，不然無法啟動。並新建批次檔。</span></div><h1>Virtualbox操作</h1>
+<p><iframe allowfullscreen="allowfullscreen" height="360" src="//www.youtube.com/embed/aDRXxs25UYM" width="500"></iframe></p>
+<p></p>
+<p><span>第一屆段完成後打https://192.168.56.2可出現以下網頁</span></p>
+<p><span></span></p>
+<p><img alt="" height="360" src="/images/chrome_2019-04-30_15-30-12.png" width="598"/></p>
+<p><span>打https://192.168.56.2:5443可開啟網頁</span></p>
+<p><img alt="" height="301" src="/images/2019-04-30_15-30-03.png" width="500"/></p>
+<p></p>
+<p></p><h1>頁面編輯</h1>
 <p>CMSimfly 動態系統的網際編輯器採用 <a href="https://www.tiny.cloud/">TinyMCE4</a>, 可以放入一般超文件,  納入圖檔, 嵌入影片連結, 並且加入帶有行數的原始碼.</p>
 <p>透過 File Upload 功能, 可以一次上傳多個檔案,  存入 downloads 目錄中儲存, 之後各頁面可以引入對應連結.</p>
 <p>而圖檔的上傳與引用與一般檔案類似, 但上傳後存入 images 目錄中.</p>
@@ -437,9 +461,11 @@ print("總共猜了 "..num.." 次, answer=guess="..answer.." - correct")
    &lt;/body&gt;
 &lt;/html&gt;
 COPY TO CLIPBOARD	</pre>
-<p></p><h1>網際簡報</h1>
-<p>CMSimfly 中採用 <a href="https://revealjs.com/#/">Reveal.js</a> 作為網際簡報, 其中的維護檔案位於 config/reveal.js, 而對應的簡報檔案則位於 reveal 目錄中.</p>
-<h1>網誌編輯</h1>
+<p></p><h1>批次檔案</h1>
+<p><span>Q如何建立批次檔?</span><br/><br/><span>Step1；去SciTe新建檔案&gt;將程式複製貼上 &gt;Save as 在隨身碟Y槽</span><br/><span>     <span> </span></span><br/><span>             [為了與ungit作區別，因此將其名稱為kungit.bat]&gt;從可攜home找出對應的git</span><br/><span>              設定</span><br/><br/><span>Step2:去隨身碟Y槽&gt;home&gt;查看有無git設定&gt;沒有的話測試程式碼能否運作&gt;git clone測試網頁</span><br/><br/><span>打開ungit在CMS下面的各時間提交之內容&gt;[進入測試網頁&gt;打kungit指令]</span><br/><span>       <span> </span></span><br/><span>           條件:  1.必須在某個git倉儲下指令(cd....)&gt;目的為由Chrom開啟</span><br/><br/><span>                      2.必須啟動ungit對應的的\批次檔。</span><br/><span>             為了確保關閉nodejs不干擾運作，下載process explorer ，取64....的Z複製下來，貼在y槽以便隨時關閉程式。</span><br/><br/><span>找到在最下面的綠色node按右鍵kill process&gt;把nodejs上次對應的8443的批次檔關閉，指令便可正常運作。(即可不會抱怨。)</span><br/><br/><br/><span>刪除nodejs之8443的批號後，重新打入kungit指令即可看到ungit網頁跳出。</span></p>
+<h3>資料上傳不上去導至網頁錯誤的原因</h3>
+<h4>reaon</h4>
+<div class="post-body entry-content float-container" id="post-body-6779593299493180310">Y:\&gt;cd project<br/>Y:\project&gt;dir<br/>Y:\project&gt;cd cmstest&gt;更換目錄到contest<br/><span>Y:\project\cmstest&gt;python wsgi.py</span><br/><span>進入address可改版，一˙但改版可進行版次推送</span><br/><span><br/></span><span>Login完week2打入根據[...網址...]完成ungit的配置，按github page，回到ungit網頁，push上去。</span><br/><span><br/></span><span>假如網頁出現錯誤:</span><br/><span><br/></span><span><br/></span><span>由於沒有在Home底下有對應的git config</span><br/><span>Home(外部)    Home_cadlab(內部)</span><br/><span>先檢查有無gitconfig!</span></div><h1>網誌編輯</h1>
 <p>CMSimfly 彩用 <a href="https://blog.getpelican.com/">Pelican blog</a> 系統, 編輯檔案位於 config/pelican.leo, 對應的</p>
 <p> Markdown 原始檔案位於 markdown 目錄中, 而經 Pelican 轉換出的網誌超文件檔案則位於 blog 目錄中.</p>
 <p>其餘在網誌文章中所需要的 Javascript 或 Brython 程式檔案, 則與 CMSimfly 及 Reveal.js 共用, 位於 static 目錄下.</p>
