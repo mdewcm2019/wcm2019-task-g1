@@ -1,6 +1,25 @@
+<<<<<<< HEAD
 <h1>如何設定Proxy之連線</h1>
 <p>第一步驟開啟proxy伺服器設定，之後得知正確分享器之網址，連接成功後開啟儲存，即可完成。</p>
 <h1>G1期中資料</h1>
+=======
+<h1>期末報告說明</h1>
+<p>各組組員請依照各頁面主題, 分別利用各自帳號下的 CMSimfly, Reveal 與 Pelican (Blogger) 內容, 引用至各相關頁面外, 再分別依據各頁面所執行的操作內容, 拍成影音說明影片, 以"<span style="color: #ff0000;">國立虎尾科技大學-機械設計工程系-網際內容管理-學號-影片主題</span>"為名稱, 上傳到各自的 Youtube 帳號下後, 嵌入到下列各頁面中, 以作為期末課程評分依據.</p>
+<p>各學員將資料推送到各組網站時, 必須引用 Github 上版本提交號或連結, 並在影片內容中提供相關資料的說明與連結.</p><h1>網路連線設定</h1>
+<p>了解機械設計系電腦輔助設計室電腦的網路設定, 其中包括 IPv4 網路與 IPv6 網路設定.<br/><br/>正常情況下, 電腦輔助設計室中的 64 台電腦透過 IPv4 協定下的 DHCP 與 NAT 上網, 各電腦以 DHCP client 取得 192.168.1.* 的網路位址, 然後以 NAT 的一組外部 IP 上網, 通常必須設定 Proxy Server 為 http://proxy.kmol.info:3128 後上網會比較順暢, 但若 8 台 Proxy Servers 無法正常運作時, 則取消 Proxy Server 的設定.<br/><br/>瀏覽器代理主機設定<br/><br/>了解如何設定 Google Chrome 與 Firefox 瀏覽器的代理主機設定.<br/><br/>申請 Github 帳號<br/><br/>利用 Gmail 帳號申請 Github 帳號, 申請後利用電子郵箱收信進行確認後, 就可以在 Github 上建立倉儲.</p><h1>配置可攜程式環境</h1>
+<p>取得 Windows 10 64 位元環境下的可攜程式環境 (下載  2019_cdb_w5.7z), 下載後解開目錄, 放入 USB3.0 規格以上的隨身碟或隨身硬碟.<br/><br/>以滑鼠點擊 start.bat 開啟可攜隨身系統, 以 stop.bat 關閉可攜隨身系統, 隨身碟必須在關閉所有應用程式執行下, 才可正常退出.<br/><br/>了解基本的 DOS (Disk Operating System) 指令<br/><br/>C:\&gt; 符號為 DOS 命令列視窗的回應 (Prompt), 表示目前在 C 槽硬碟的 \ 根目錄, 若要切換到 Y 槽, 則在電腦的回應後, 輸入 Y:, 命令列將轉為<br/><br/>Y:\&gt;<br/><br/>若要更換目錄, 則使用 cd, 也就是 change directory 的意思, 例如:<br/><br/>Y:\&gt;cd tmp<br/><br/>表示要從 Y 槽的根目錄更換到 tmp 目錄, 也就是<br/><br/>Y:\tmp&gt;<br/><br/>若要再回到 Y 槽的根目錄, 可以使用 cd ..<br/><br/>表示要從目前所在目錄, 往上跳回一個目錄, 也就是重新回到 Y 槽的根目錄.<br/><br/>另外, 無論目前位於哪一個子目錄, 也可以使用 cd \<br/><br/>直接回到根目錄.<br/><br/>或者從 Y:\&gt; 直接使用<br/><br/>cd \tmp\repo\ssh\wcm2019<br/><br/>直接從 Y 槽的根目錄, 跳進 Y:\tmp\repo\ssh\wcm2019&gt;<br/><br/>此外, 常用的 DOS 指令有:<br/><br/>dir - 列出目前所在目錄的內容<br/><br/>mkdir - 隨後加上要建立目錄的名稱, 可以建立目錄<br/><br/>cls - clear screen, 清除目前的命令列顯示的內容</p>
+<h1>倉儲改版</h1>
+<p>建立 Git 倉儲, 並 clone 倉儲至近端工作後, 對遠端倉儲改版<br/><br/>可攜程式系統中已經內建 git, 可以在啟動 start.bat 後, 透過 path 的設定, 直接執行 git 指令.<br/><br/>建立 Git 倉儲, 共分為兩類, 一類是直接在 Github 網際介面下建立倉儲時, 要求建立 README.md 檔案, 之後可以直接在近端, 以 git clone 加上倉儲連線 URL, 將倉儲克隆一份到近端, 並以最新版本作為工作目錄, 使用者改版後, 可以直接透過 git add, commit 與 push 對遠端倉儲改版.<br/><br/>另一類則是故意在 Github 網際介面下建立倉儲時, 不要建立任何檔案, 而是在近端自行利用 git 指令建立倉儲架構, 新增內容後, 以 git remote add 設法在近端倉儲中納入 origin URL 後, 將近端倉儲版本新增提交推送到遠端.<br/><br/>git add<br/><br/>git add 可以用來新增一個檔案, 數個檔案, 或在之前提交後所新增的所有內容.<br/><br/>git add 在 GIT 架構下, 是對所新增或修改的內容拍快照:<br/><br/>git add . adds all modified and new (untracked) files in the current directory and all subdirectories to the staging area (a.k.a. the index), thus preparing them to be included in the next git commit . Any files matching the patterns in the .gitignore file will be ignored by git add<br/><br/>git commit<span> </span><br/><br/>git commit 執行之前, 必須使用 git config 建立臨時或永久的身分註記, 因為 GIT 在展開所有改版內容時, 必須明確登錄這些變更的作者與時間.<br/><br/>當使用者採用 git commit -m "改版說明訊息", 此次提交到 .git 目錄下的更動內容, 均會綁定使用者身分與改版所輸入的說明訊息.<br/><br/>git push<br/><br/>git push 在隨後沒有輸入遠端 URL 代號時, 表示要推送到 origin, 若透過 git remote add 設定其他代號與 URL 對應時, git push 加上代號, 就可以將此次的提交內容, 推送到指定的 URL 所在遠端倉儲.</p>
+<h1>靜態 CMSimfly</h1>
+<p>利用 CMSimfly (https://github.com/chiamingyen/cmsimfly) 內容, 建立自己的 Github Pages 網站<br/><br/>設法利用<span> </span><a href="http://mde.tw/wcm2019/content/%E5%AF%A6%E7%BF%92%E9%A0%85%E7%9B%AE%E4%B8%89.html">HTML5 CSS 與 Javascript</a>, 納入與機械設計相關的靜態網頁內容</p>
+<h1>Mobile 網站內容</h1>
+<p>參考倉儲:<span> </span><a href="https://github.com/mdecourse/acmsimfly">https://github.com/mdecourse/acmsimfly</a></p>
+<p>參考網站:<span> </span><a href="http://mde.tw/acmsimfly">http://mde.tw/acmsimfly</a></p>
+<p><br/>學習如何使用 CMSimfly, 在網站中加入各種內容 (導入 Bootstrap frontend framework)<br/><br/>使用 Flask, bs4 與 lxml 模組<br/><br/>了解 CMSimfly 如何建構, 並且嘗試修改現有功能, 除錯或建立自己的網際內容管理系統</p>
+<h1>Virtual Host</h1>
+<p>參考 vdi:<br/><br/>位於雲端的<span> </span><a href="https://drive.google.com/file/d/1bSBdEPVn6IG22cVLpTbY97JY16vjlatz/view?usp=sharing">Ubuntu 18.04_201904.vdi</a><span> </span>(約 9 GB) - 已經配置 Fossil SCM: https 5443, Host-only: 192.168.56.2, https: 443 and 8843 for CMSimfly, Squid Proxy Server.<br/><br/>假如要利用 USB 隨身碟存放上述約 9 GB 的 Ubuntu 18.04 vdi 檔案, 必須將隨身碟格式化為 NTFS, 若採 Fat32 格式, 最大單一檔案必須小於 4 GB.<br/><br/>另外在近端有一類似的檔案, 可提供上課學員下載:<br/><br/><a href="http://wcmg1.kmol.info:88/ub1804_nox.vdi">http://wcmg1.kmol.info:88/ub1804_nox.vdi</a><span> </span>(僅限近端用戶使用 IPv6 協定者下載)</p>
+<p>Fossil SCM<br/><br/>如何利用 Fossil SCM, 在 Virtualbox 中的 Ubuntu 18.04-2 (8.5 GB) 建立類似 Github 的系統, 可以放入 CMSimfly 的靜態網頁<br/><br/>Ubuntu 18.04 (https://www.ubuntu.com/about/release-cycle), 配置網路連線, 然後架構 uwsgi 環境下的 CMSimfly 動態網站, 或建立 Fossil SCM 用來伺服管理 CMSimfly 下有版次管理的靜態網頁, 或利用 nginx 伺服無版次管理的 CMSimfly 靜態網頁.</p><h1>G1期中資料</h1>
+>>>>>>> d027fa629b2a802852ab05e21f562c247b7d7df2
 <p>40723101沈易萱</p>
 <p><iframe allowfullscreen="allowfullscreen" height="360" src="//www.youtube.com/embed/L2CcWxgyY3Q" width="500"></iframe></p>
 <p>40723102林昱秀</p>
@@ -13,7 +32,8 @@
 <p><iframe allowfullscreen="allowfullscreen" height="360" src="//www.youtube.com/embed/C7vEZgBVBXc" width="500"></iframe></p>
 <p>40723128郭哲明</p>
 <p><iframe allowfullscreen="allowfullscreen" height="360" src="//www.youtube.com/embed/xOyw4eNSXKc" width="500"></iframe></p>
-<p></p><h2>導入ungit</h2>
+<p></p>
+<h2>導入ungit</h2>
 <p><span>nodejs裡面有ungit-&gt;程式為nodejs所寫，nodejs位置在</span><span>appdata-&gt;roming-&gt;npm-&gt;ungi</span><span> 。</span><br/><span>程式碼在appdata-&gt;roming-&gt;npm-&gt;node-modules-&gt;ungit-&gt;CHANGELOG.md。</span><br/><b><br/></b><span></span></p>
 <h4>start.bat跟start.cadlab.bat差別</h4>
 <p><span>因Home位置不同，適用範圍有所不同!!</span><br/><span>start.bat=&gt;學校外適用。</span><br/><span>start.cadlab.bat=&gt;學校內適用，不能使用在學校外的地方。</span><br/><br/></p>
@@ -35,7 +55,8 @@
 <h4>STAPE2</h4>
 <div><span>可在mde.tw中2019 spring...裡，實習任務之任務2有明確步驟可找到下面的程式。</span></div>
 <div><span>ungit --launchBrowser=0 --launchCommand "C:\PROGRA~2\Google\Chrome\Application\chrome.exe  %U"</span></div>
-<div><span>需使用簡寫，不然無法啟動。並新建批次檔。</span></div><h2>Virtualbox操作</h2>
+<div><span>需使用簡寫，不然無法啟動。並新建批次檔。</span></div>
+<h2>Virtualbox操作</h2>
 <p><iframe allowfullscreen="allowfullscreen" height="360" src="//www.youtube.com/embed/aDRXxs25UYM" width="500"></iframe></p>
 <p></p>
 <p><span>第一屆段完成後打https://192.168.56.2可出現以下網頁</span></p>
@@ -45,10 +66,12 @@
 <p><img alt="" height="301" src="/images/2019-04-30_15-30-03.png" width="500"/></p>
 <p></p>
 <p></p>
-<p></p><h2>插入程式碼</h2>
+<p></p>
+<h2>插入程式碼</h2>
 <p>CMSimfly 目前使用 Syntaxhighlighter 3.0.83:</p>
 <p> <a href="http://alexgorbatchev.com/SyntaxHighlighter/">http://alexgorbatchev.com/SyntaxHighlighter/</a> </p>
-<p>進行頁面中的程式碼高亮顯示.</p><h3>Java 程式碼</h3>
+<p>進行頁面中的程式碼高亮顯示.</p>
+<h3>Java 程式碼</h3>
 <pre class="brush:java;auto-links:false;toolbar:false" contenteditable="false">import java.util.Scanner;
 
 public class Life {
@@ -128,7 +151,8 @@ public class Life {
     }
 
 }</pre>
-<p></p><h3>Python 程式碼</h3>
+<p></p>
+<h3>Python 程式碼</h3>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def parse_content():
     """use bs4 and re module functions to parse content.htm"""
     #from pybean import Store, SQLiteWriter
@@ -210,7 +234,8 @@ public class Life {
     return head_list, level_list, page_list
 
 </pre>
-<p></p><h3>C或C++程式碼</h3>
+<p></p>
+<h3>C或C++程式碼</h3>
 <p>請注意, 目前 CMSimfly 標題內文無法解讀 "/" 符號, 因此若本頁面的標題為  "C/C++程式碼", 則無法進行分頁.</p>
 <pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">/* Runge Kutta for a set of first order differential equations */
  
@@ -306,7 +331,8 @@ double f(double x, double y[], int i){
     x=-y[0]-0.5*y[1];
   return x;
 }</pre>
-<p></p><h3>Lua 程式碼</h3>
+<p></p>
+<h3>Lua 程式碼</h3>
 <pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">-- 導入 js 模組
 js = require("js")
 -- 取得 window
@@ -334,7 +360,8 @@ while answer ~= tonumber(guess) do
 end
 print("總共猜了 "..num.." 次, answer=guess="..answer.." - correct")
     </pre>
-<p></p><h3>Javascript 程式碼</h3>
+<p></p>
+<h3>Javascript 程式碼</h3>
 <pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">STLViewer = function(stlpath, plotarea) {
 
 	var mycanvas = document.getElementById(plotarea);
@@ -419,7 +446,8 @@ print("總共猜了 "..num.." 次, answer=guess="..answer.." - correct")
 	}
 }
 </pre>
-<p></p><h3>Html 原始碼</h3>
+<p></p>
+<h3>Html 原始碼</h3>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;html&gt;
    &lt;head&gt;
       &lt;meta http-equiv="content-type" content="text/html;charset=utf-8"&gt;
@@ -463,10 +491,13 @@ print("總共猜了 "..num.." 次, answer=guess="..answer.." - correct")
    &lt;/body&gt;
 &lt;/html&gt;
 COPY TO CLIPBOARD	</pre>
-<p></p><h2>批次檔案</h2>
-<p><span>Q如何建立批次檔?</span><br/><br/><span>Step1；去SciTe新建檔案&gt;將程式複製貼上 &gt;Save as 在隨身碟Y槽</span><br/><span>     <span> </span></span><br/><span>             [為了與ungit作區別，因此將其名稱為kungit.bat]&gt;從可攜home找出對應的git</span><br/><span>              設定</span><br/><br/><span>Step2:去隨身碟Y槽&gt;home&gt;查看有無git設定&gt;沒有的話測試程式碼能否運作&gt;git clone測試網頁</span><br/><br/><span>打開ungit在CMS下面的各時間提交之內容&gt;[進入測試網頁&gt;打kungit指令]</span><br/><span>       <span> </span></span><br/><span>           條件:  1.必須在某個git倉儲下指令(cd....)&gt;目的為由Chrom開啟</span><br/><br/><span>                      2.必須啟動ungit對應的的\批次檔。</span><br/><span>             為了確保關閉nodejs不干擾運作，下載process explorer ，取64....的Z複製下來，貼在y槽以便隨時關閉程式。</span><br/><br/><span>找到在最下面的綠色node按右鍵kill process&gt;把nodejs上次對應的8443的批次檔關閉，指令便可正常運作。(即可不會抱怨。)</span><br/><br/><br/><span>刪除nodejs之8443的批號後，重新打入kungit指令即可看到ungit網頁跳出。</span></p><h3>資料上傳不上去導至網頁錯誤的原因</h3>
+<p></p>
+<h2>批次檔案</h2>
+<p><span>Q如何建立批次檔?</span><br/><br/><span>Step1；去SciTe新建檔案&gt;將程式複製貼上 &gt;Save as 在隨身碟Y槽</span><br/><span>     <span> </span></span><br/><span>             [為了與ungit作區別，因此將其名稱為kungit.bat]&gt;從可攜home找出對應的git</span><br/><span>              設定</span><br/><br/><span>Step2:去隨身碟Y槽&gt;home&gt;查看有無git設定&gt;沒有的話測試程式碼能否運作&gt;git clone測試網頁</span><br/><br/><span>打開ungit在CMS下面的各時間提交之內容&gt;[進入測試網頁&gt;打kungit指令]</span><br/><span>       <span> </span></span><br/><span>           條件:  1.必須在某個git倉儲下指令(cd....)&gt;目的為由Chrom開啟</span><br/><br/><span>                      2.必須啟動ungit對應的的\批次檔。</span><br/><span>             為了確保關閉nodejs不干擾運作，下載process explorer ，取64....的Z複製下來，貼在y槽以便隨時關閉程式。</span><br/><br/><span>找到在最下面的綠色node按右鍵kill process&gt;把nodejs上次對應的8443的批次檔關閉，指令便可正常運作。(即可不會抱怨。)</span><br/><br/><br/><span>刪除nodejs之8443的批號後，重新打入kungit指令即可看到ungit網頁跳出。</span></p>
+<h3>資料上傳不上去導至網頁錯誤的原因</h3>
 <h4>reaon</h4>
-<div class="post-body entry-content float-container" id="post-body-6779593299493180310">Y:\&gt;cd project<br/>Y:\project&gt;dir<br/>Y:\project&gt;cd cmstest&gt;更換目錄到contest<br/><span>Y:\project\cmstest&gt;python wsgi.py</span><br/><span>進入address可改版，一˙但改版可進行版次推送</span><br/><span><br/></span><span>Login完week2打入根據[...網址...]完成ungit的配置，按github page，回到ungit網頁，push上去。</span><br/><span><br/></span><span>假如網頁出現錯誤:</span><br/><span><br/></span><span><br/></span><span>由於沒有在Home底下有對應的git config</span><br/><span>Home(外部)    Home_cadlab(內部)</span><br/><span>先檢查有無gitconfig!</span></div><h2>已知錯誤</h2>
+<div class="post-body entry-content float-container" id="post-body-6779593299493180310">Y:\&gt;cd project<br/>Y:\project&gt;dir<br/>Y:\project&gt;cd cmstest&gt;更換目錄到contest<br/><span>Y:\project\cmstest&gt;python wsgi.py</span><br/><span>進入address可改版，一˙但改版可進行版次推送</span><br/><span><br/></span><span>Login完week2打入根據[...網址...]完成ungit的配置，按github page，回到ungit網頁，push上去。</span><br/><span><br/></span><span>假如網頁出現錯誤:</span><br/><span><br/></span><span><br/></span><span>由於沒有在Home底下有對應的git config</span><br/><span>Home(外部)    Home_cadlab(內部)</span><br/><span>先檢查有無gitconfig!</span></div>
+<h2>已知錯誤</h2>
 <h4>全部頁面會因無法正確解讀而誤刪</h4>
 <p>在特定情況下, 系統會誤刪 config/content.htm 檔案, 目前在單頁或全部頁面編輯存檔之前, 或將上一版本的 content.htm 存入 content_back.htm, 若 content.htm 內容被程式誤刪, 可以利用備份檔案複製回原始內容後, 再進行後續處理.</p>
 <h4>頁面標題不支援特殊符號</h4>
