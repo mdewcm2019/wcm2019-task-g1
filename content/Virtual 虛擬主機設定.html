@@ -1,0 +1,111 @@
+<!doctype html>
+<html><head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>CMSimfly</title> <link rel="stylesheet" type="text/css" href="./../static/cmsimply.css">
+<script src="tipuesearch_content.js"></script>
+<script src="./../static/jquery.js"></script>
+<link rel="stylesheet" href="./../static/tipuesearch/css/tipuesearch.css">
+<script src="./../static/tipuesearch/tipuesearch_set.js"></script>
+<script src="./../static/tipuesearch/tipuesearch.min.js"></script>
+
+<script type="text/javascript" src="./../static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCSharp.js"></script>
+<link type="text/css" rel="stylesheet" href="./../static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- for LaTeX equations 暫時不用
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+-->
+<!-- 暫時不用
+<script src="./../static/fengari-web.js"></script>
+<script type="text/javascript" src="./../static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+
+<script type="text/javascript">
+/*shorthand of $(document).ready(function(){};); */
+$(function(){
+    $("ul.topmenu> li:has(ul) > a").append('<div class="arrow-right"></div>');
+    $("ul.topmenu > li ul li:has(ul) > a").append('<div class="arrow-right"></div>');
+});
+function doSearch() {
+     $('#tipue_search_input').tipuesearch({
+        newWindow: true, minimumLength: 2
+     });
+}
+$(document).ready(doSearch);
+</script>
+
+</head><header><h1>MDE-G1期中期末倉儲</h1> <confmenu>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="sitemap.html">Site Map</a></li>
+<li><a href="./../reveal/index.html">reveal</a></li>
+<li><a href="./../blog/index.html">blog</a></li>
+
+</ul>
+</confmenu></header>
+<div class='container'><nav><ul id='css3menu1' class='topmenu'><div class="tipue_search_group"><input style="width: 6vw;" type="text" name="q" id="tipue_search_input" pattern=".{2,}" title="Press enter key to search" required></div><li><a href='期末報告說明.html'>期末報告說明</a><li><a href='網路連線設定.html'>網路連線設定</a><ul><li><a href='創建Github帳號.html'>創建Github帳號</a><li><a href='設定Proxy與Chrome代理主機設定.html'>設定Proxy與Chrome代理主機設定</a></li></ul><li><a href='配置可攜程式環境.html'>配置可攜程式環境</a><ul><li><a href='下載可攜式環境並練習指令.html'>下載可攜式環境並練習指令</a></li></ul><li><a href='倉儲改版.html'>倉儲改版</a><ul><li><a href='進入倉儲之步驟.html'>進入倉儲之步驟</a></li></ul><li><a href='靜態 CMSimfly.html'>靜態 CMSimfly</a><ul><li><a href='程式碼操作.html'>程式碼操作</a></li></ul><li><a href='Mobile 網站內容.html'>Mobile 網站內容</a><li><a href='Virtual Host.html'>Virtual Host</a><ul><li><a href='Virtual 虛擬主機設定.html'>Virtual 虛擬主機設定</a></li></ul><li><a href='G1期中資料.html'>G1期中資料</a><ul><li><a href='導入ungit.html'>導入ungit</a><li><a href='Virtualbox操作.html'>Virtualbox操作</a><li><a href='插入程式碼.html'>插入程式碼</a><ul><li><a href='Java 程式碼.html'>Java 程式碼</a><li><a href='Python 程式碼.html'>Python 程式碼</a><li><a href='C或C++程式碼.html'>C或C++程式碼</a><li><a href='Lua 程式碼.html'>Lua 程式碼</a><li><a href='Javascript 程式碼.html'>Javascript 程式碼</a><li><a href='Html 原始碼.html'>Html 原始碼</a></li></ul><li><a href='批次檔案.html'>批次檔案</a><ul><li><a href='資料上傳不上去導至網頁錯誤的原因.html'>資料上傳不上去導至網頁錯誤的原因</a></li></ul><li><a href='已知錯誤.html'>已知錯誤</a></li></ul></nav><section><div id="tipue_search_content">Virtual Host << <a href='Virtual Host.html'>Previous</a> <a href='G1期中資料.html'>Next</a> >> G1期中資料<br /><h1>Virtual 虛擬主機設定</h1>
+<p><iframe allowfullscreen="allowfullscreen" height="360" src="//www.youtube.com/embed/aDRXxs25UYM" width="500"></iframe></p>
+<p>1.<span style="color: #ff0000;">先下載軟件安裝</span></p>
+<p><img alt="" height="268" src="./../images/chrome_2019-05-02_14-35-53.png" width="500"/></p>
+<p>2.<span style="color: #ff0000;">開始設定軟件驅動路徑</span></p>
+<p><img alt="" height="263" src="./../images/chrome_2019-05-02_14-36-08.png" width="500"/></p>
+<p>3.<span style="color: #ff0000;">之後開啟虛擬主機，嘗試打開網頁，如打不開網頁可嘗試下列步驟解決</span></p>
+<p><img alt="" height="406" src="./../images/chrome_2019-05-02_14-36-41.png" width="500"/></p>
+<p>帳號密碼kmol2019</p>
+<p>ifconfig</p>
+<p>cd/etc/netplan</p>
+<p>is -1</p>
+<p>sudo vi 50-cloud-init.yuml  按enter</p>
+<p>kmol2019</p>
+<p>進入編輯模式，將True變更為False</p>
+<p>不是DHCP  </p>
+<p>設定addresses</p>
+<p>啟動-192.168.56.2/24</p>
+<p>要有gateway4:192.168.56.1</p>
+<p>可重新讀取</p>
+<p>跳出編輯模式，按下esc     :wq</p>
+<p>sudo netplan apply</p>
+<p>ifconfig</p>
+<p>假如還是開不了網頁，回到根目錄cd</p>
+<p>回到編輯模式查看是否設定錯誤，cd uwsgi-ini</p>
+<p>                                                                              is -1</p>
+<p>                                                                             sudo vi uwsgi.ini </p>
+<p>源成設定後，即可開啟網頁。</p>
+<p><img alt="" height="361" src="./../images/chrome_2019-04-30_15-30-12.png" width="600"/></p>
+<p>分別有兩個網頁需開啟</p>
+<p><img alt="" height="301" src="./../images/2019-04-30_15-30-03.png" width="500"/></p><br />Virtual Host << <a href='Virtual Host.html'>Previous</a> <a href='G1期中資料.html'>Next</a> >> G1期中資料</div></section></div></body></html>

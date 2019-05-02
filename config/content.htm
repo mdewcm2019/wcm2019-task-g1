@@ -1,6 +1,7 @@
 <h1>期末報告說明</h1>
 <p>各組組員請依照各頁面主題, 分別利用各自帳號下的 CMSimfly, Reveal 與 Pelican (Blogger) 內容, 引用至各相關頁面外, 再分別依據各頁面所執行的操作內容, 拍成影音說明影片, 以"<span style="color: #ff0000;">國立虎尾科技大學-機械設計工程系-網際內容管理-學號-影片主題</span>"為名稱, 上傳到各自的 Youtube 帳號下後, 嵌入到下列各頁面中, 以作為期末課程評分依據.</p>
-<p>各學員將資料推送到各組網站時, 必須引用 Github 上版本提交號或連結, 並在影片內容中提供相關資料的說明與連結.</p><h1>網路連線設定</h1>
+<p>各學員將資料推送到各組網站時, 必須引用 Github 上版本提交號或連結, 並在影片內容中提供相關資料的說明與連結.</p>
+<p><img alt="" height="289" src="/images/github-mark.png" width="550"/></p><h1>網路連線設定</h1>
 <p>了解機械設計系電腦輔助設計室電腦的網路設定, 其中包括 IPv4 網路與 IPv6 網路設定.<br/><br/>正常情況下, 電腦輔助設計室中的 64 台電腦透過 IPv4 協定下的 DHCP 與 NAT 上網, 各電腦以 DHCP client 取得 192.168.1.* 的網路位址, 然後以 NAT 的一組外部 IP 上網, 通常必須設定 Proxy Server 為 http://proxy.kmol.info:3128 後上網會比較順暢, 但若 8 台 Proxy Servers 無法正常運作時, 則取消 Proxy Server 的設定.<br/><br/>瀏覽器代理主機設定<br/><br/>了解如何設定 Google Chrome 與 Firefox 瀏覽器的代理主機設定.<br/><br/>申請 Github 帳號<br/><br/>利用 Gmail 帳號申請 Github 帳號, 申請後利用電子郵箱收信進行確認後, 就可以在 Github 上建立倉儲.</p>
 <h2>創建Github帳號</h2>
 <p><iframe allowfullscreen="allowfullscreen" height="360" src="//www.youtube.com/embed/gSUjyc3mQic" width="500"></iframe></p>
@@ -28,22 +29,29 @@
 <p>2.<span style="color: #ff0000;">開始練習指令</span></p>
 <p><span style="color: #ff0000;">D:  <span style="color: #000000;">去D槽之區域gi </span></span></p>
 <p><span color="#000000" style="color: #000000;"><span style="color: #ff0000;">cd </span> 進入資料夾</span></p>
-<p><span style="color: #ff0000;">cd \</span> 返回根目錄</p>
+<p><span style="color: #ff0000;">cd \</span>   or <span style="color: #ff0000;">cd .</span>返回根目錄</p>
+<p><span style="color: #ff0000;">git init</span> 增加數據庫</p>
 <p><span style="color: #ff0000;">git clone</span>下載(後面需增加網址)</p>
-<p><span style="color: #ff0000;">git add .</span>  快照，類似捕捉增加之資訊所用</p>
-<p><span style="color: #ff0000;">git status</span>查看增加資訊之指令，可知道是否通過審核</p>
+<p><span style="color: #ff0000;">git add .</span>  快照，將工作區資料加入索引</p>
+<p><span style="color: #ff0000;">git status</span>確認工作目錄與索引狀態</p>
 <p><span style="color: #ff0000;">git pull</span>檢查近遠端是否連接</p>
 <p><span style="color: #ff0000;">git commit -m "檔案名稱"</span>推送上去之前所包裝之資料夾</p>
 <p><span color="#000000" style="color: #000000;"><span style="color: #ff0000;">git push</span>推送(會問帳號密碼)</span></p>
 <p><span color="#000000" style="color: #000000;"><span style="color: #ff0000;">git branch</span>查看分支</span></p>
-<p><span color="#000000" style="color: #000000;"><span style="color: #ff0000;">git merge</span>將分支合併</span></p>
-<p><span color="#000000" style="color: #000000;"><span style="color: #ff0000;">git  checkout</span> 將開端切換到想要地方</span></p>
-<p><span color="#000000" style="color: #000000;"><span style="color: #ff0000;">git log</span>查看SciTe的順序，從頭到尾</span></p>
+<p><span color="#000000" style="color: #000000;"><span style="color: #ff0000;">git merge(分支名稱) </span>將某分支合併到目前分支，有commit</span></p>
+<p><span color="#000000" style="color: #000000;"><span style="color: #ff0000;">git rebase(分支名稱) </span>將目前分支合併到某分支中，不會有commit</span></p>
+<p><span color="#000000" style="color: #000000;"><span style="color: #ff0000;">git  checkout</span> 將開端移動HEAD</span></p>
+<p><span color="#000000" style="color: #000000;"><span style="color: #ff0000;">git log</span>檢視提交紀錄</span></p>
 <p><span color="#000000" style="color: #000000;"><span style="color: #ff0000;">git log --oneline --graph --all</span>要求出現開頭的列表</span></p>
 <p><span color="#000000" style="color: #000000;"><span style="color: #ff0000;">git diff</span>查看上一個資料</span></p>
 <p><span color="#000000" style="color: #000000;"><span style="color: #ff0000;">git stash</span>移除上一個資料</span></p>
 <p><span color="#000000" style="color: #000000;"><span style="color: #ff0000;">python  --version</span>查看python之版本</span></p>
-<p><span style="color: #ff0000;"><span color="#000000" style="color: #000000;">git config </span></span></p>
+<p><span color="#000000" style="color: #000000;"><span style="color: #ff0000;">git remote</span> 顯示遠端儲存庫</span></p>
+<p><span style="color: #ff0000;">git clean</span> 刪除工作區中未被追蹤的文件</p>
+<p><span color="#000000" style="color: #000000;"></span></p>
+<p><span color="#000000" style="color: #000000;"></span></p>
+<p><span color="#000000" style="color: #000000;"></span></p>
+<p><span color="#000000" style="color: #000000;"></span></p>
 <p><span color="#000000" style="color: #000000;"></span></p>
 <p></p><h1>倉儲改版</h1>
 <p>建立 Git 倉儲, 並 clone 倉儲至近端工作後, 對遠端倉儲改版<br/><br/>可攜程式系統中已經內建 git, 可以在啟動 start.bat 後, 透過 path 的設定, 直接執行 git 指令.<br/><br/>建立 Git 倉儲, 共分為兩類, 一類是直接在 Github 網際介面下建立倉儲時, 要求建立 README.md 檔案, 之後可以直接在近端, 以 git clone 加上倉儲連線 URL, 將倉儲克隆一份到近端, 並以最新版本作為工作目錄, 使用者改版後, 可以直接透過 git add, commit 與 push 對遠端倉儲改版.<br/><br/>另一類則是故意在 Github 網際介面下建立倉儲時, 不要建立任何檔案, 而是在近端自行利用 git 指令建立倉儲架構, 新增內容後, 以 git remote add 設法在近端倉儲中納入 origin URL 後, 將近端倉儲版本新增提交推送到遠端.<br/><br/>git add<br/><br/>git add 可以用來新增一個檔案, 數個檔案, 或在之前提交後所新增的所有內容.<br/><br/>git add 在 GIT 架構下, 是對所新增或修改的內容拍快照:<br/><br/>git add . adds all modified and new (untracked) files in the current directory and all subdirectories to the staging area (a.k.a. the index), thus preparing them to be included in the next git commit . Any files matching the patterns in the .gitignore file will be ignored by git add<br/><br/>git commit<span> </span><br/><br/>git commit 執行之前, 必須使用 git config 建立臨時或永久的身分註記, 因為 GIT 在展開所有改版內容時, 必須明確登錄這些變更的作者與時間.<br/><br/>當使用者採用 git commit -m "改版說明訊息", 此次提交到 .git 目錄下的更動內容, 均會綁定使用者身分與改版所輸入的說明訊息.<br/><br/>git push<br/><br/>git push 在隨後沒有輸入遠端 URL 代號時, 表示要推送到 origin, 若透過 git remote add 設定其他代號與 URL 對應時, git push 加上代號, 就可以將此次的提交內容, 推送到指定的 URL 所在遠端倉儲.</p>
@@ -59,13 +67,79 @@
 <p><span style="color: #000000;"><img alt="" height="329" src="/images/chrome_2019-05-02_01-42-35.png" width="700"/></span></p>
 <p><span style="color: #ff0000;"></span></p><h1>靜態 CMSimfly</h1>
 <p>利用 CMSimfly (https://github.com/chiamingyen/cmsimfly) 內容, 建立自己的 Github Pages 網站<br/><br/>設法利用<span> </span><a href="http://mde.tw/wcm2019/content/%E5%AF%A6%E7%BF%92%E9%A0%85%E7%9B%AE%E4%B8%89.html">HTML5 CSS 與 Javascript</a>, 納入與機械設計相關的靜態網頁內容</p>
-<h1>Mobile 網站內容</h1>
+<h2>程式碼操作</h2>
+<p>舉例:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># location of boost headers:
+    BOOST_INCLUDEPATH = "y:/boost_1_66_0"    # (e.g. Windows)
+    #BOOST_INCLUDEPATH = "/usr/local/include"    # (e.g. MacOS)
+ 
+# location of lua headers:
+    LUA_INCLUDEPATH = "y:/lua-5.1.5/src"    # (e.g. Windows)
+    #LUA_INCLUDEPATH = "../../../../../mingw64/include/lua5.1"    # (e.g. Windows-MSYS2)
+    #LUA_INCLUDEPATH = "../../lua5_1_4_Linux26g4_64_lib/include"    # (e.g. Ubuntu)
+    #LUA_INCLUDEPATH = "/usr/local/include/lua5.1"    # (e.g. MacOS)
+ 
+# lua libraries to link:
+    LUA_LIBS = "y:/lua-5.1.5/src/liblua.a"    # (e.g. Windows)
+    #LUA_LIBS = -llua5.1    # (e.g. Windows-MSYS2)
+    #LUA_LIBS = -L"../../lua5_1_4_Linux26g4_64_lib/" -llua5.1    # (e.g. Ubuntu)
+    #LUA_LIBS = "/usr/local/lib/liblua5.1.dylib"    # (e.g. MacOS)
+ 
+# qscintilla location:
+    QSCINTILLA_DIR = "y:/QScintilla_gpl-2.10.2"    # (e.g. Windows)
+    #QSCINTILLA_DIR = "../../QScintilla-commercial-2.7.2"    # (e.g. Windows-MSYS2)
+    #QSCINTILLA_DIR = "../../QScintilla-commercial-2.7.2"    # (e.g. Ubuntu)
+    #QSCINTILLA_DIR = "../../QScintilla-commercial-2.7.2"    # (e.g. MacOS)
+ 
+# qscintilla headers:
+    QSCINTILLA_INCLUDEPATH = "$${QSCINTILLA_DIR}/include" "$${QSCINTILLA_DIR}/Qt4Qt5"
+ 
+# qscintilla libraries to link:
+    QSCINTILLA_LIBS = "$${QSCINTILLA_DIR}/libqscintilla2_qt5d.dll.a"    # (e.g. Windows)
+    #QSCINTILLA_LIBS = "$${QSCINTILLA_DIR}/release/release/libqscintilla2.dll.a"    # (e.g. Windows-MSYS2)    
+    #QSCINTILLA_LIBS = "$${QSCINTILLA_DIR}/release/libqscintilla2.so"    # (e.g. Ubuntu)
+    #QSCINTILLA_LIBS = "$${QSCINTILLA_DIR}/release/libqscintilla2.9.0.2.dylib"    # (e.g. MacOS)
+ 
+# Make sure if a config.pri is found one level above, that it will be used instead of this one:
+    exists(../config.pri) { include(../config.pri) }</pre>
+<p></p><h1>Mobile 網站內容</h1>
 <p>參考倉儲:<span> </span><a href="https://github.com/mdecourse/acmsimfly">https://github.com/mdecourse/acmsimfly</a></p>
 <p>參考網站:<span> </span><a href="http://mde.tw/acmsimfly">http://mde.tw/acmsimfly</a></p>
 <p><br/>學習如何使用 CMSimfly, 在網站中加入各種內容 (導入 Bootstrap frontend framework)<br/><br/>使用 Flask, bs4 與 lxml 模組<br/><br/>了解 CMSimfly 如何建構, 並且嘗試修改現有功能, 除錯或建立自己的網際內容管理系統</p>
 <h1>Virtual Host</h1>
 <p>參考 vdi:<br/><br/>位於雲端的<span> </span><a href="https://drive.google.com/file/d/1bSBdEPVn6IG22cVLpTbY97JY16vjlatz/view?usp=sharing">Ubuntu 18.04_201904.vdi</a><span> </span>(約 9 GB) - 已經配置 Fossil SCM: https 5443, Host-only: 192.168.56.2, https: 443 and 8843 for CMSimfly, Squid Proxy Server.<br/><br/>假如要利用 USB 隨身碟存放上述約 9 GB 的 Ubuntu 18.04 vdi 檔案, 必須將隨身碟格式化為 NTFS, 若採 Fat32 格式, 最大單一檔案必須小於 4 GB.<br/><br/>另外在近端有一類似的檔案, 可提供上課學員下載:<br/><br/><a href="http://wcmg1.kmol.info:88/ub1804_nox.vdi">http://wcmg1.kmol.info:88/ub1804_nox.vdi</a><span> </span>(僅限近端用戶使用 IPv6 協定者下載)</p>
-<p>Fossil SCM<br/><br/>如何利用 Fossil SCM, 在 Virtualbox 中的 Ubuntu 18.04-2 (8.5 GB) 建立類似 Github 的系統, 可以放入 CMSimfly 的靜態網頁<br/><br/>Ubuntu 18.04 (https://www.ubuntu.com/about/release-cycle), 配置網路連線, 然後架構 uwsgi 環境下的 CMSimfly 動態網站, 或建立 Fossil SCM 用來伺服管理 CMSimfly 下有版次管理的靜態網頁, 或利用 nginx 伺服無版次管理的 CMSimfly 靜態網頁.</p><h1>G1期中資料</h1>
+<p>Fossil SCM<br/><br/>如何利用 Fossil SCM, 在 Virtualbox 中的 Ubuntu 18.04-2 (8.5 GB) 建立類似 Github 的系統, 可以放入 CMSimfly 的靜態網頁<br/><br/>Ubuntu 18.04 (https://www.ubuntu.com/about/release-cycle), 配置網路連線, 然後架構 uwsgi 環境下的 CMSimfly 動態網站, 或建立 Fossil SCM 用來伺服管理 CMSimfly 下有版次管理的靜態網頁, 或利用 nginx 伺服無版次管理的 CMSimfly 靜態網頁.</p>
+<h2>Virtual 虛擬主機設定</h2>
+<p><iframe allowfullscreen="allowfullscreen" height="360" src="//www.youtube.com/embed/aDRXxs25UYM" width="500"></iframe></p>
+<p>1.<span style="color: #ff0000;">先下載軟件安裝</span></p>
+<p><img alt="" height="268" src="/images/chrome_2019-05-02_14-35-53.png" width="500"/></p>
+<p>2.<span style="color: #ff0000;">開始設定軟件驅動路徑</span></p>
+<p><img alt="" height="263" src="/images/chrome_2019-05-02_14-36-08.png" width="500"/></p>
+<p>3.<span style="color: #ff0000;">之後開啟虛擬主機，嘗試打開網頁，如打不開網頁可嘗試下列步驟解決</span></p>
+<p><img alt="" height="406" src="/images/chrome_2019-05-02_14-36-41.png" width="500"/></p>
+<p>帳號密碼kmol2019</p>
+<p>ifconfig</p>
+<p>cd/etc/netplan</p>
+<p>is -1</p>
+<p>sudo vi 50-cloud-init.yuml  按enter</p>
+<p>kmol2019</p>
+<p>進入編輯模式，將True變更為False</p>
+<p>不是DHCP  </p>
+<p>設定addresses</p>
+<p>啟動-192.168.56.2/24</p>
+<p>要有gateway4:192.168.56.1</p>
+<p>可重新讀取</p>
+<p>跳出編輯模式，按下esc     :wq</p>
+<p>sudo netplan apply</p>
+<p>ifconfig</p>
+<p>假如還是開不了網頁，回到根目錄cd</p>
+<p>回到編輯模式查看是否設定錯誤，cd uwsgi-ini</p>
+<p>                                                                              is -1</p>
+<p>                                                                             sudo vi uwsgi.ini </p>
+<p>源成設定後，即可開啟網頁。</p>
+<p><img alt="" height="361" src="/images/chrome_2019-04-30_15-30-12.png" width="600"/></p>
+<p>分別有兩個網頁需開啟</p>
+<p><img alt="" height="301" src="/images/2019-04-30_15-30-03.png" width="500"/></p><h1>G1期中資料</h1>
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; d027fa629b2a802852ab05e21f562c247b7d7df2
 <p>40723101沈易萱</p>
 <p><iframe allowfullscreen="allowfullscreen" height="360" src="//www.youtube.com/embed/L2CcWxgyY3Q" width="500"></iframe></p>
@@ -113,8 +187,7 @@
 <p><img alt="" height="301" src="/images/2019-04-30_15-30-03.png" width="500"/></p>
 <p></p>
 <p></p>
-<p></p>
-<h2>插入程式碼</h2>
+<p></p><h2>插入程式碼</h2>
 <p>CMSimfly 目前使用 Syntaxhighlighter 3.0.83:</p>
 <p> <a href="http://alexgorbatchev.com/SyntaxHighlighter/">http://alexgorbatchev.com/SyntaxHighlighter/</a> </p>
 <p>進行頁面中的程式碼高亮顯示.</p>
