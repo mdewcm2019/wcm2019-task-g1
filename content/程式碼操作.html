@@ -1,0 +1,116 @@
+<!doctype html>
+<html><head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>CMSimfly</title> <link rel="stylesheet" type="text/css" href="./../static/cmsimply.css">
+<script src="tipuesearch_content.js"></script>
+<script src="./../static/jquery.js"></script>
+<link rel="stylesheet" href="./../static/tipuesearch/css/tipuesearch.css">
+<script src="./../static/tipuesearch/tipuesearch_set.js"></script>
+<script src="./../static/tipuesearch/tipuesearch.min.js"></script>
+
+<script type="text/javascript" src="./../static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCSharp.js"></script>
+<link type="text/css" rel="stylesheet" href="./../static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- for LaTeX equations 暫時不用
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+-->
+<!-- 暫時不用
+<script src="./../static/fengari-web.js"></script>
+<script type="text/javascript" src="./../static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+
+<script type="text/javascript">
+/*shorthand of $(document).ready(function(){};); */
+$(function(){
+    $("ul.topmenu> li:has(ul) > a").append('<div class="arrow-right"></div>');
+    $("ul.topmenu > li ul li:has(ul) > a").append('<div class="arrow-right"></div>');
+});
+function doSearch() {
+     $('#tipue_search_input').tipuesearch({
+        newWindow: true, minimumLength: 2
+     });
+}
+$(document).ready(doSearch);
+</script>
+
+</head><header><h1>MDE-G1期中期末倉儲</h1> <confmenu>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="sitemap.html">Site Map</a></li>
+<li><a href="./../reveal/index.html">reveal</a></li>
+<li><a href="./../blog/index.html">blog</a></li>
+
+</ul>
+</confmenu></header>
+<div class='container'><nav><ul id='css3menu1' class='topmenu'><div class="tipue_search_group"><input style="width: 6vw;" type="text" name="q" id="tipue_search_input" pattern=".{2,}" title="Press enter key to search" required></div><li><a href='期末報告說明.html'>期末報告說明</a><li><a href='網路連線設定.html'>網路連線設定</a><ul><li><a href='創建Github帳號.html'>創建Github帳號</a><li><a href='設定Proxy與Chrome代理主機設定.html'>設定Proxy與Chrome代理主機設定</a></li></ul><li><a href='配置可攜程式環境.html'>配置可攜程式環境</a><ul><li><a href='下載可攜式環境並練習指令.html'>下載可攜式環境並練習指令</a></li></ul><li><a href='倉儲改版.html'>倉儲改版</a><ul><li><a href='進入倉儲之步驟.html'>進入倉儲之步驟</a></li></ul><li><a href='靜態 CMSimfly.html'>靜態 CMSimfly</a><ul><li><a href='程式碼操作.html'>程式碼操作</a></li></ul><li><a href='Mobile 網站內容.html'>Mobile 網站內容</a><li><a href='Virtual Host.html'>Virtual Host</a><ul><li><a href='Virtual 虛擬主機設定.html'>Virtual 虛擬主機設定</a></li></ul><li><a href='G1期中資料.html'>G1期中資料</a><ul><li><a href='導入ungit.html'>導入ungit</a><li><a href='Virtualbox操作.html'>Virtualbox操作</a><li><a href='插入程式碼.html'>插入程式碼</a><ul><li><a href='Java 程式碼.html'>Java 程式碼</a><li><a href='Python 程式碼.html'>Python 程式碼</a><li><a href='C或C++程式碼.html'>C或C++程式碼</a><li><a href='Lua 程式碼.html'>Lua 程式碼</a><li><a href='Javascript 程式碼.html'>Javascript 程式碼</a><li><a href='Html 原始碼.html'>Html 原始碼</a></li></ul><li><a href='批次檔案.html'>批次檔案</a><ul><li><a href='資料上傳不上去導至網頁錯誤的原因.html'>資料上傳不上去導至網頁錯誤的原因</a></li></ul><li><a href='已知錯誤.html'>已知錯誤</a></li></ul></nav><section><div id="tipue_search_content">靜態 CMSimfly << <a href='靜態 CMSimfly.html'>Previous</a> <a href='Mobile 網站內容.html'>Next</a> >> Mobile 網站內容<br /><h1>程式碼操作</h1>
+<p>舉例:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># location of boost headers:
+    BOOST_INCLUDEPATH = "y:/boost_1_66_0"    # (e.g. Windows)
+    #BOOST_INCLUDEPATH = "/usr/local/include"    # (e.g. MacOS)
+ 
+# location of lua headers:
+    LUA_INCLUDEPATH = "y:/lua-5.1.5/src"    # (e.g. Windows)
+    #LUA_INCLUDEPATH = "../../../../../mingw64/include/lua5.1"    # (e.g. Windows-MSYS2)
+    #LUA_INCLUDEPATH = "../../lua5_1_4_Linux26g4_64_lib/include"    # (e.g. Ubuntu)
+    #LUA_INCLUDEPATH = "/usr/local/include/lua5.1"    # (e.g. MacOS)
+ 
+# lua libraries to link:
+    LUA_LIBS = "y:/lua-5.1.5/src/liblua.a"    # (e.g. Windows)
+    #LUA_LIBS = -llua5.1    # (e.g. Windows-MSYS2)
+    #LUA_LIBS = -L"../../lua5_1_4_Linux26g4_64_lib/" -llua5.1    # (e.g. Ubuntu)
+    #LUA_LIBS = "/usr/local/lib/liblua5.1.dylib"    # (e.g. MacOS)
+ 
+# qscintilla location:
+    QSCINTILLA_DIR = "y:/QScintilla_gpl-2.10.2"    # (e.g. Windows)
+    #QSCINTILLA_DIR = "../../QScintilla-commercial-2.7.2"    # (e.g. Windows-MSYS2)
+    #QSCINTILLA_DIR = "../../QScintilla-commercial-2.7.2"    # (e.g. Ubuntu)
+    #QSCINTILLA_DIR = "../../QScintilla-commercial-2.7.2"    # (e.g. MacOS)
+ 
+# qscintilla headers:
+    QSCINTILLA_INCLUDEPATH = "$${QSCINTILLA_DIR}/include" "$${QSCINTILLA_DIR}/Qt4Qt5"
+ 
+# qscintilla libraries to link:
+    QSCINTILLA_LIBS = "$${QSCINTILLA_DIR}/libqscintilla2_qt5d.dll.a"    # (e.g. Windows)
+    #QSCINTILLA_LIBS = "$${QSCINTILLA_DIR}/release/release/libqscintilla2.dll.a"    # (e.g. Windows-MSYS2)    
+    #QSCINTILLA_LIBS = "$${QSCINTILLA_DIR}/release/libqscintilla2.so"    # (e.g. Ubuntu)
+    #QSCINTILLA_LIBS = "$${QSCINTILLA_DIR}/release/libqscintilla2.9.0.2.dylib"    # (e.g. MacOS)
+ 
+# Make sure if a config.pri is found one level above, that it will be used instead of this one:
+    exists(../config.pri) { include(../config.pri) }</pre>
+<p></p><br />靜態 CMSimfly << <a href='靜態 CMSimfly.html'>Previous</a> <a href='Mobile 網站內容.html'>Next</a> >> Mobile 網站內容</div></section></div></body></html>
